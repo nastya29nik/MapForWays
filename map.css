@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+}
+
+.route-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    max-width: 200px;
+    font-size: 14px;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background: white;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.route-switcher {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.leaflet-popup-content {
+    text-align: center;
+    max-width: 250px;
+}
+
+.custom-marker {
+    border-radius: 50%;
+    background: purple;
+    border: 2px solid white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    z-index: 1000 !important; /* Важно: обеспечиваем поверхностное отображение */
+}
+
+/* Стили для изображений в popup */
+.leaflet-popup-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Увеличиваем z-index для маркеров */
+.leaflet-marker-icon {
+    z-index: 1000 !important;
+}
+
+/* Уменьшаем z-index для линий маршрута */
+.route-line {
+    z-index: 100 !important;
+}
