@@ -218,24 +218,6 @@ function addBackButton() {
     document.body.appendChild(backButton);
 }
 
-// Функция для добавления переключателя маршрутов (только для разработки)
-function addRouteSwitcher() {
-    // Проверяем, не в Telegram ли мы
-    if (!window.Telegram || !window.Telegram.WebApp) {
-        const switcher = document.createElement('div');
-        switcher.className = 'route-switcher';
-        switcher.innerHTML = `
-            <div style="position: absolute; bottom: 10px; left: 10px; z-index: 1000; background: white; padding: 10px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.2);">
-                <h3 style="margin: 0 0 10px 0;">Переключение маршрутов (только для разработки)</h3>
-                <button onclick="switchRoute(1)" style="margin: 5px; padding: 5px 10px;">Маршрут 1</button>
-                <button onclick="switchRoute(2)" style="margin: 5px; padding: 5px 10px;">Маршрут 2</button>
-                <button onclick="switchRoute(3)" style="margin: 5px; padding: 5px 10px;">Маршрут 3</button>
-            </div>
-        `;
-        document.body.appendChild(switcher);
-    }
-}
-
 // Функция для переключения маршрутов (только для разработки)
 function switchRoute(routeNum) {
     // Обновляем URL без перезагрузки страницы
